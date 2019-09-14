@@ -1,0 +1,64 @@
+package exer7;
+
+import javax.swing.JOptionPane;
+
+public class Sexo {
+
+	public int sexo, media, idadeM;
+	public int idade,  numero, qtdHom = 0, qtdMu = 0, qtdMU30 = 0, qtdTot = 0;
+	
+	public void insereDados() {
+		
+		numero = Integer.parseInt(JOptionPane.showInputDialog("Digite seu numero"));
+		qtdHom=0;
+		while (numero != 999) {
+
+			try {
+				sexo = Integer.parseInt(JOptionPane.showInputDialog("Digite o Sexo \n 1 - Masculino \n 2 - Feminino"));
+				calculaResultados();
+				idade = Integer.parseInt(JOptionPane.showInputDialog("Digite a idade"));
+				numero = Integer.parseInt(JOptionPane.showInputDialog("Digite o Código do Funcionário"));
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+			}
+		}
+		
+	}
+
+	public void imprimeDados() {
+		JOptionPane.showMessageDialog(null, "Dados" + "\nNumero :" + numero + "\nSexo :" + sexo
+				+ "\nIdade :" + idade);
+		JOptionPane.showMessageDialog(null, "A media de idades de homens é: " +media+"\n A soma das idades das mulheres é: "+idadeM);
+		If();
+	}
+
+	public void calculaResultados() {
+		if(sexo==1){
+			idade+=idade;
+			qtdHom=qtdHom+1;
+			
+		}
+		else if(sexo ==2){
+			idadeM+=idade;
+			qtdMu=qtdMu+1;
+		}
+	}
+		public void media(){
+			media = idade / qtdHom;
+		}
+		public void If(){
+			if(qtdMu<qtdHom){
+				JOptionPane.showMessageDialog(null, "Há mais homens do que mulheres.");
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "Há mais mulheres do que homens.");
+			}
+		}
+	}
+
+	
+
+	
+		
+	
+	

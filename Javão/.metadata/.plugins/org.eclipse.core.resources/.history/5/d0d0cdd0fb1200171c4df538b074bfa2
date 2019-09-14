@@ -1,0 +1,60 @@
+package exer4;
+
+import javax.swing.JOptionPane;
+
+public class Mes {
+
+	public int num;
+	public String escolha;
+
+	public void InsereNumero(){
+		do{
+			JOptionPane.showMessageDialog(null,"--------Meses-------");
+			num = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero correspondente ao mes do ano :"));
+			switch (num) {
+			case 1:
+				System.out.println("Janeiro, 31 dias");
+				break;
+			case 2:
+				System.out.println("Fevereiro, 28 dias");
+				break;
+			case 3:
+				System.out.println("Março, 31 dias");
+				break;
+			case 4:
+				System.out.println("Abril, 30 dias");
+				break;
+			case 5:
+				System.out.println("Maio, 31 dias");
+				break;
+			case 6:
+				System.out.println("Junho, 30 dias");
+				break;
+			case 7:
+				System.out.println("Julho, 31 dias");
+				break;
+			case 8:
+				System.out.println("Agosto, 31 dias");
+				break;
+			case 9:
+				System.out.println("Setembro, 30 dias");
+				break;
+			case 10:
+				System.out.println("Outubro, 31 dias");
+				break;
+			case 11:
+				System.out.println("Novembro, 30 dias");
+				break;
+			case 12:
+				System.out.println("Dezembro, 31 dias");
+				break;
+
+			default:System.out.println("Não foi possivel executar esta ação...");
+				break;
+			}
+			escolha = JOptionPane.showInputDialog("Deseja executar novamente? s ou n?");
+		}
+		while(escolha == "s");
+	}
+}
+	

@@ -1,0 +1,13 @@
+package exer4;
+
+public class MesPrincipal {
+
+	public static void main(String[] args) {
+
+		Mes objMes = new Mes();
+		
+		objMes.InsereNumero();
+		
+	}
+
+}

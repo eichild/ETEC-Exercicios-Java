@@ -1,0 +1,19 @@
+package exer4;
+
+import javax.swing.JOptionPane;
+
+public class Mes {
+
+	public int num, escolha;
+
+	public void InsereNumero(){
+		do{
+			num = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero correspondente ao mes do ano :"));
+	
+		}
+		while(num <=12);
+	
+
+	}
+}
+	

@@ -1,0 +1,48 @@
+package exer1;
+
+import javax.swing.JOptionPane;
+
+public class SalarioLiq {
+
+	public String nome;
+	public int matricula;
+	public float salarioBruto, salarioLiquido, desconto, totalLiq;
+
+public void insereDados(){
+do{
+	nome=JOptionPane.showInputDialog("Dígite seu nome :");
+	matricula=Integer.parseInt(JOptionPane.showInputDialog("Dígite o numero de sua matricula :"));
+	salarioBruto=Float.parseFloat(JOptionPane.showInputDialog("Digite salario Bruto :"));
+	}
+while(matricula!=10);
+calculoDesc();
+}
+public void imprimeDados() {
+	
+	JOptionPane.showMessageDialog(null, "Dados do Funcionário\n" + "\nNome " + nome 
+			+ "\nMatricula " + matricula + "\nSalario Bruto" +salarioBruto+ 
+			"\nSalarioLiquido :" +salarioLiquido);
+	
+}
+
+
+public void calculoDesc(){
+	if( salarioBruto<=1500){
+		desconto = salarioBruto * 0.6f;
+		salarioLiquido = salarioBruto - desconto;
+		
+	}
+	else if(salarioBruto >=1501){
+		desconto = salarioBruto * 9.5f;
+		salarioLiquido = salarioBruto - desconto;
+	}
+}
+	public void calculoTotal(){
+		totalLiq=salarioLiquido;	
+}
+public void imprimirSalarioTotal(){
+	JOptionPane.showMessageDialog(null, "O total de salarios é :" +totalLiq);
+}
+
+}
+
